@@ -1,0 +1,11 @@
+<view class="">
+  <image src="{{imgBackground}}"class='imgBackground' mode='scaleToFill'/>
+  <image src="{{imgUser}}" class='imgUser'/>
+  <text class="userName">{{userName}}</text>
+  <scroll-view wx:for="{{historyArray}}">
+    <view class='{{item.Class}}'>
+      <text>{{item.datetime}}</text>
+      <text>{{item.content}}</text>
+    </view>
+  </scroll-view> 
+</view>

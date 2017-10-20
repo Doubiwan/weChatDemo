@@ -1,0 +1,157 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.swiper{
+  width:100%;
+  flex: 2.3;
+}
+
+.scroll-view{
+  background-color: #F5F5F5; 
+}
+
+.scroll-list{
+  flex: 3;
+}
+
+.order_key{
+  text-align: center;
+  margin: 5%;
+}
+
+.time_first{
+  margin-top: 10%;
+  font-size: 26rpx;
+  font-weight: bold;
+  padding-bottom: 10rpx;
+  border-bottom: 5rpx solid #000;
+  margin-right:10%;
+}
+
+.time_first_toggle{
+  margin-top: 10%;
+  font-size: 26rpx;
+  padding-bottom: 10rpx;
+  margin-right:10%;
+  color: #777;
+}
+
+.heat_first{
+  font-size: 26rpx;
+  font-weight: bold;
+  padding-bottom: 10rpx;
+  border-bottom: 5rpx solid #000;
+}
+
+.heat_first_toggle{
+  margin-top: 10%;
+  font-size: 26rpx;
+  padding-bottom: 10rpx;
+  color: #777;
+}
+
+.imgTop{
+  width:100%;
+  height: 192.6px;
+}
+
+.imgUser{
+  width:74px;
+  height:74px;
+  position:absolute;
+  z-index:100;
+  margin-top:37%;
+  margin-left:11%;
+  box-shadow: 5px 5px 15px #888888; 
+  border-radius: 40px;
+}
+
+.textName{
+  display:inline-block;
+  margin-left:8%;
+}
+
+.textContent{
+  margin-top:3%;
+  width: 60%;
+  display: inline-block;
+  font-size: 25rpx;
+  padding-left:5%;
+  line-height: 40rpx;
+}
+
+.imgLike,.imgShare{
+  width: 15px;
+  height: 15px;
+  padding-right: 5px;
+}
+
+.numLike,.numDislike{
+  font-size: 30rpx;
+   padding-right: 15px; 
+}
+
+.rightBottom{
+  display:inline-block;
+  float:right;
+  margin-right:6%;
+  margin-top:-2%;
+}
+
+.profile_photo{
+  width: 40px;
+  height: 40px;
+  margin-top: 16%;
+  margin-bottom: 15%;
+}
+
+.username{
+  font-size: 25rpx;
+  display: block;
+}
+
+.user_content{
+  font-size:25rpx;
+  display:block;
+  margin-top:20rpx;
+  width:90%;
+  margin-left:7%;
+  line-height: 40rpx;
+}
+
+.like_share{
+  margin-left: 73%;
+  margin-bottom: 2%
+}
+
+.userifo{
+  display: inline-block;
+  margin-left: 4%;
+}
+
+.li{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  display: inline-flex;
+  background-color: #fff;
+}

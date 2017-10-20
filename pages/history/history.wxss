@@ -1,0 +1,27 @@
+/* pages/history/history.wxss */
+.imgBackground{
+  width:100%;
+  height: 192.6px;
+}
+
+.imgUser{
+  width:74px;
+  height:74px;
+  position:absolute;
+  z-index:100;
+  margin-top:-79rpx;
+  margin-left: 11%;
+  box-shadow: 5px 5px 15px #888888; 
+  border-radius: 40px;
+}
+
+.userName{
+  z-index: 1000;
+  padding-left: 33%;
+  margin-bottom: 10%;
+  font-size: 28rpx;
+} 
+
+.blue{
+  background-image: url('../../image/dialog1.png');
+}

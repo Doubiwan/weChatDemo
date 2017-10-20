@@ -1,0 +1,52 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper 
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    circular="{{circular}}"
+    class="swiper">
+    <block wx:for="{{array_top}}">
+      <swiper-item>
+        <image src="{{item.imgUser}}" class='imgUser'/>
+        <image src="{{item.topUrl}}"class='imgTop' mode='scaleToFill'/>
+        <block>
+          <text class='textName'>{{item.name}}</text>
+        </block>
+        <block>
+          <text class='textContent'>{{item.content}}</text>
+        </block>
+        <view class="rightBottom">
+          <image src="{{imgLike}}" class='imgLike' />
+          <text class='numLike'>{{item.numLike}}</text>
+          <image src="{{imgShare}}" class='imgShare' />
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='scroll-list'>
+    <view class='order_key'>
+      <text class="{{timeClass}}" bindtap='toggleTime'>最新发表</text>
+      <text class="{{heatClass}}" bindtap='toggleHeat'>历史热度</text>
+    </view>
+    <scroll-view wx:for="{{array_list}}" class='scroll-view'>
+      <view class='li'>
+        <view class='userifo'>
+          <image src="{{item.profile_photo}}" class='profile_photo'></image>
+          <text class='username'>{{item.username}}</text>
+        </view>
+        <view class="list_item">
+          <block>
+            <text class='user_content'>{{item.user_content}}</text>
+          </block>
+          <view class='like_share'>
+            <image src="{{imgLike}}" class='imgLike' />
+            <text class='numLike'>{{item.numLike}}</text>
+            <image src="{{imgShare}}" class='imgShare' />
+          </view>
+        </view>
+      </view>
+      
+    </scroll-view>
+  </view>
+  
+</view>
