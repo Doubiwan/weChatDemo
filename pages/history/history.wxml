@@ -1,11 +1,15 @@
 <view class="">
-  <image src="{{imgBackground}}"class='imgBackground' mode='scaleToFill'/>
-  <image src="{{imgUser}}" class='imgUser'/>
-  <text class="userName">{{userName}}</text>
-  <scroll-view wx:for="{{historyArray}}">
-    <view class='{{item.Class}}'>
-      <text>{{item.datetime}}</text>
-      <text>{{item.content}}</text>
+  <view class='topText'>
+    <image src="{{pics}}"class='imgBackground' mode='scaleToFill' bindtap='uploadImg'/>
+  </view>
+  <view class='viewUser'>
+    <image src="{{imgUser}}" class='imgUser'/>
+  </view>
+  <scroll-view>
+    <view class='item' wx:for="{{history}}">
+      <text class='datetime' style='color:{{item.color}}'>{{item.createtime}}</text>
+      <image class="imgBg" src='{{item.imgSrc}}' mode='aspectFit'></image>
+      <text class='content' style='background-color:{{item.color}}'>{{item.content}}</text>
     </view>
   </scroll-view> 
 </view>

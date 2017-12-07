@@ -1,4 +1,8 @@
 /**index.wxss**/
+.container{
+  height: auto;
+}
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -22,7 +26,7 @@
 
 .swiper{
   width:100%;
-  flex: 2.3;
+  height: 640rpx;
 }
 
 .scroll-view{
@@ -30,7 +34,14 @@
 }
 
 .scroll-list{
-  flex: 3;
+  width:100%;
+}
+
+.list_item{
+  display:inline-block;
+  vertical-align:top;
+  width:80%;
+  height:100%;
 }
 
 .order_key{
@@ -71,12 +82,12 @@
 
 .imgTop{
   width:100%;
-  height: 192.6px;
+  height: 385rpx;
 }
 
 .imgUser{
-  width:74px;
-  height:74px;
+  width:148rpx;
+  height:148rpx;
   position:absolute;
   z-index:100;
   margin-top:37%;
@@ -87,21 +98,19 @@
 
 .textName{
   display:inline-block;
-  margin-left:8%;
+  width: 20%;
 }
 
 .textContent{
-  margin-top:3%;
-  width: 60%;
   display: inline-block;
   font-size: 25rpx;
-  padding-left:5%;
   line-height: 40rpx;
+  padding-bottom: 3%;
 }
 
 .imgLike,.imgShare{
-  width: 15px;
-  height: 15px;
+  width: 30rpx;
+  height: 30rpx;
   padding-right: 5px;
 }
 
@@ -113,45 +122,65 @@
 .rightBottom{
   display:inline-block;
   float:right;
-  margin-right:6%;
-  margin-top:-2%;
 }
 
 .profile_photo{
   width: 40px;
   height: 40px;
   margin-top: 16%;
-  margin-bottom: 15%;
+  margin-bottom:5%;
+  border-radius:20rpx;
 }
 
 .username{
-  font-size: 25rpx;
+  font-size: 20rpx;
   display: block;
+  color:#bcbcbc;
 }
 
 .user_content{
-  font-size:25rpx;
+  font-size:28rpx;
   display:block;
   margin-top:20rpx;
-  width:90%;
   margin-left:7%;
   line-height: 40rpx;
 }
 
 .like_share{
-  margin-left: 73%;
-  margin-bottom: 2%
+  display:flex;
+  width:100%;
+  flex-direction:row;
+  justify-content:flex-end;
+  margin-top: 4.5%;
+  align-items:center;
 }
 
 .userifo{
-  display: inline-block;
-  margin-left: 4%;
+  display:inline-flex;
+  margin-left:4%;
+  flex-direction:column;
+  align-items:center;
 }
 
 .li{
   margin-top: 10rpx;
   margin-left: 10rpx;
   margin-right: 10rpx;
-  display: inline-flex;
   background-color: #fff;
+  border-radius:15rpx;
+}
+
+.textCmd{
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+}
+
+.textRight{
+  display:flex;
+  flex-direction:column;
+  width:65%;
+  padding-left:4%;
+  align-items:flex-end;
+  padding-top:3%;
 }

@@ -2,32 +2,47 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/history/history"
+    "pages/history/history",
+    "pages/write/write",
+    "pages/test/test",
+    "pages/imgCropper/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "backgroundColor": "#f0145a",
+    "navigationBarBackgroundColor": "#f0145a",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh":true
   },
   "tabBar": {
     "borderStyle": "white",
-    "backgroundColor": "#fff",
+    "backgroundColor": "#f3f3f3",
     "list": [
       {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/index_unsel.png",
+        "selectedIconPath": "image/index_sel.png"
+      },
+      {
+        "pagePath": "pages/write/write",
+        "iconPath": "image/write_unsel.png",
+        "selectedIconPath": "image/write_sel.png"
+      },
+      {
         "pagePath": "pages/history/history",
-        "iconPath": "image/history_unsel.jpg",
-        "selectedIconPath": "image/history_sel.jpg"
+        "iconPath": "image/history_unsel.png",
+        "selectedIconPath": "image/history_sel.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/index_unsel.jpg",
-        "selectedIconPath": "image/index_sel.jpg"
+        "pagePath": "pages/imgCropper/index",
+        "iconPath": "image/write_unsel.png",
+        "selectedIconPath": "image/write_sel.png"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/write_unsel.jpg",
-        "selectedIconPath": "image/write_sel.jpg"
+        "pagePath": "pages/test/test",
+        "iconPath": "image/write_unsel.png",
+        "selectedIconPath": "image/write_sel.png"
       }
     ]
   }

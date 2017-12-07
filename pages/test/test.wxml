@@ -1,0 +1,3 @@
+<!--pages/test/test.wxml-->
+<button type="default" bindtap="change"> default </button>
+

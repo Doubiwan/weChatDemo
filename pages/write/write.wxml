@@ -1,0 +1,43 @@
+<!--pages/write/write.wxml-->
+<view class="section">
+  <textarea focus="{{focus}}" class="txtArea" placeholder="说点什么吧" placeholder-class="placeholderClass" bindblur="getValue" auto-focus/>
+</view>
+<view class='anonymousTitle'>
+  <text>匿名模式</text>
+  <switch checked bindchange='switchanonymous'></switch>
+</view>
+<view class='user page' style="display:{{switchdisplay}}" animation="{{animationData}}">
+  <image class='icon' src='http://47.94.146.199:8080/resource/imgs/upload.png' bindtap="choose"></image> 
+  <scroll-view class='userImg' scroll-x="true"  bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"  scroll-left="{{scrollLeft}}">
+    <view class='uploadImgList' wx:for="{{pics}}">
+      <image data-imgsrc="{{item}}" src="{{item}}" class="uploadImg {{uploadImg==item? 'boxsel' : 'box'}}" mode="aspecFit" bindtap='chooseImgUrl'/> 
+    </view>
+    <view wx:for='{{imgList}}'>
+      <image data-imgsrc="{{item}}" class="img {{uploadImg==item? 'boxsel' : 'box'}}" src='{{item}}' bindtap='chooseImgUrl'></image>
+    </view>
+  </scroll-view> 
+</view>
+<view class='namelist page' style="display:{{switchdisplay}}" animation="{{animationData}}">
+  <view class='nameTitle'>{{namedata}}</view>
+  <view class='nameContent'>
+    <picker-view indicator-style="height: 50px;" class="namepicker" value="{{value}}" bindchange="bindChange">
+      <picker-view-column>
+        <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+      </picker-view-column>
+    </picker-view>
+    <input class="inputName" type='text' placeholder='这些我都不喜欢哼~' placeholder-class='inputPlace' bindinput="bindinput" value='{{inputValue}}'></input>
+  </view>
+</view>
+<view class='sync'>
+  <text>同步</text>
+  <image class="share" src="{{share ? 'http://47.94.146.199:8080/resource/imgs/friends_sel.png' : 'http://47.94.146.199:8080/resource/imgs/friends_unsel.png'}}" bindtap='shareToFriends'></image>
+  <button form-type='submit' type="{{btntype}}" plain='{{plain}}' bindtap='submit' loading='{{loading}}' class='send' size='mini'>发送</button>
+</view>
+
+

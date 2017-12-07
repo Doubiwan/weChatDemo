@@ -1,0 +1,114 @@
+.trans-header{
+	width: 100%;
+	position: fixed;
+    transition-duration: 0.6s;
+    transition-property: line-height,height,transform,opacity;
+    transform: translateY(-150px);
+}
+
+.trans-header.trans-header-expend{
+	transform: translateY(0px);
+	background-image: url('http://img4.imgtn.bdimg.com/it/u=2418226610,2868081468&fm=27&gp=0.jpg');
+	background-repeat: no-repeat;
+	background-position: center
+}
+.trans-header.trans-header-expend:after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	content: " ";
+	z-index: 0;
+}
+.trans-header .title{
+	position: relative;
+	z-index: 1;
+}
+
+/* demo */
+.demo-header{
+	height: 200px;
+	line-height: 50px;
+	background: #1ABC9C;
+	text-align: center;
+}
+.demo-header .head-img{
+	opacity: 0;
+	transition-duration: 0.6s;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 2px solid #fff;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 30px;
+}
+.demo-header.trans-header-expend .head-img{
+	transform: translate(-50%,-10px);
+	opacity: 1;
+}
+.demo-header .head-img img{
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+}
+
+.demo-header .title{
+	color: #fff;
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	transition-duration: 0.3s;
+}
+.demo-header.trans-header-expend .title{
+	bottom: 25px;
+}
+
+.demo-content{
+	padding-top: 200px;
+}
+
+.demo-content .text{
+	line-height: 200px;
+}
+
+.demo-header .demo-info {
+	transition-duration: 0.6s;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 105px;
+	width: 100%;
+}
+.demo-header.trans-header-expend .demo-info{
+	transform: translate(-50%,-20px);
+}
+.demo-header.trans-header-expend .demo-info .text{
+	opacity: 1;
+}
+.demo-info .text.sex{
+	transform: translateX(-20px);
+}
+.demo-info .text.xinzuo{
+	transform: translateX(20px);
+}
+.demo-header.trans-header-expend .demo-info .text{
+	transform: none;
+}
+.demo-info .text{
+	font-size: 12px;
+	color: #fff;
+	padding: 0 3px;
+	transition-duration: 0.6s;
+	display: inline-block;
+	opacity: 0;
+}
